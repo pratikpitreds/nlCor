@@ -2,29 +2,31 @@
 % Please edit documentation in R/nlCor.R
 \name{nlCor}
 \alias{nlCor}
-\title{Non Linear Correaltion function - Correlation coeffecient by considering non linear realtionships among two variables}
+\title{Non-Linear Correaltion Function}
 \usage{
-nlCor(X, Y, inverse = F, n = 2, method = "log", na.rm = F)
+nlCor(x, y, inverse = F, n = 2, method = "log", na.rm = F)
+nlCor(x, y, inverse = F, n = 2,
+      method = c("log","expo","poly","Linear"), na.rm = F)
 }
 \arguments{
-\item{X}{: first dataset (can be a matrix or dataframe or array)}
+\item{x}{ a numeric vector, matrix or data frame.}
 
-\item{Y}{: second dataset (can be a matrix or dataframe or array)}
+\item{y}{ second dataset (can be a matrix or dataframe or array)}
 
-\item{inverse}{: is to take the inverse relation eg. checking 1/X^2,1/X^3 insted of X^2, X^3}
+\item{inverse}{ take the inverse relation eg. transforming 1/x^2,1/x^3 insted of x^2, x^3, default is false.}
 
-\item{n}{: Maximum Order number you would want to check}
+\item{n}{ Maximum power or degree one would want to check, default is 2.}
 
-\item{method}{: log(logarithmic), poly(Polynomial), expo(Exponential), Linear. Default is log}
+\item{method}{  a character string indicating which Non linear method is to be computed - log(logarithmic), poly(Polynomial), expo(Exponential) and Linear. Default is log.}
 }
 \value{
-nlCor(X,Y)
+nlCor(x,y)
 }
 \description{
-Non Linear Correaltion function - Correlation coeffecient by considering non linear realtionships among two variables
+Non Linear Correaltion function - It helps to explore the hidden Non-linear relationships between given x and y. Non linear correlation between variables is quantified and given as output, which helps to understand the level of non linear association among variables. Transformation is done with reference from tukey's ladder of transformation/
 }
 \examples{
-X <- mtcars[,1:2]
-Y <- mtcars[,1:2]
-nlCor(X,Y,method="poly",n=3)
+x <- mtcars[,1:2]
+y <- mtcars[,1:2]
+nlCor(x,y,method="poly",n=3)
 }
