@@ -1,22 +1,22 @@
- #' Non Linear Correaltion function - Correlation coeffecient by considering non linear realtionships among two variables
- #' @param X         a numeric vector, matrix or data frame.
- #' @param Y         a vector, matrix or data frame with compatible dimensions to x
- #' @param inverse   an optional parameter to take the relation between inverse eg. checking 1/X^2,1/X^3 insted of X^2, X^3
- #' @param n         Maximum Order number you would want to check
- #' @param method    a character string indicating which correlation coefficient (or covariance) is to be computed.
- #' @param method    log(logarithmic), poly(Polynomial), expo(Exponential), Linear. Default is log.
+#' Non Linear Correaltion (Matrices)- Correlation coeffecient by considering non linear realtionships among two or more variables
+#' @param x         a numeric vector, matrix or data frame.
+#' @param y         a vector, matrix or data frame with compatible dimensions to x
+#' @param inverse   an optional parameter to take the relation between inverse eg. checking 1/x^2,1/x^3 insted of x^2, x^3
+#' @param n         Maximum Order of relation you would want to check
+#' @param method    a character string indicating which correlation coefficient (or covariance) is to be computed.
+#' @param method    log(logarithmic), poly(Polynomial), expo(Exponential), Linear. Default is log.
 
- #' @examples X <- mtcars[,1:2]
- #' @examples Y <- mtcars[,1:2]
- #' @examples nlCor(X,Y,method="poly",n=3)
- #' @return Returns Non Linear Correlation coeffecient
- #' @export
+#' @examples x <- mtcars[,1:2]
+#' @examples y <- mtcars[,1:2]
+#' @examples nlCor(x,y,method="poly",n=3)
+#' @return Returns Non Linear Correlation coeffecient
+#' @export
 
-nlCor <-function(X,Y,inverse=F,n=2,method="log",na.rm=F){
+nlCor <-function(x,y,inverse=F,n=2,method="log",na.rm=F){
   #checking the error conditions on arguments
 
-  X <- as.matrix(X)
-  Y <- as.matrix(Y)
+  X <- as.matrix(x)
+  Y <- as.matrix(y)
 
   if (!(is.logical(inverse)))
     stop("'Inverse' must be Logical")
