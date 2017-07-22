@@ -26,7 +26,18 @@ nlCor(x,y)
 Non Linear Correaltion function - It helps to explore the hidden Non-linear relationships between given x and y. Non linear correlation between variables is quantified and given as output, which helps to understand the level of non linear association among variables. Transformation is done with reference from tukey's ladder of transformation/
 }
 \examples{
-x <- mtcars[,1:2]
-y <- mtcars[,1:2]
-nlCor(x,y,method="poly",n=3)
+y <- c(1,2,3,4,5,6)
+x <- c(exp(1),exp(2),exp(3),exp(4),exp(5),exp(6))
+
+nlCor(x,y,n=2,method=c("log","Linear"))
+
+y <- c(1,4,9,16,25)
+x <- c(1,2,3,4,5)
+
+nlCor(x,y,n=2,method=c("poly","Linear"))
+
+y <- c(1,8,27,64,125)
+x <- c(1,2,3,4,5)
+
+nlCor(x,y,n=3,method=c("poly","Linear"))
 }
