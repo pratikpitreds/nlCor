@@ -1,9 +1,10 @@
  #' Non Linear Correaltion function - Correlation coeffecient by considering non linear realtionships among two variables
- #' @param X : first dataset (can be a matrix or dataframe or array)
- #' @param Y : second dataset (can be a matrix or dataframe or array)
- #' @param inverse : is to take the inverse relation eg. checking 1/X^2,1/X^3 insted of X^2, X^3
- #' @param n : Maximum Order number you would want to check
- #' @param method : log(logarithmic), poly(Polynomial), expo(Exponential), Linear. Default is log
+ #' @param X         a numeric vector, matrix or data frame.
+ #' @param Y         a vector, matrix or data frame with compatible dimensions to x
+ #' @param inverse   an optional parameter to take the relation between inverse eg. checking 1/X^2,1/X^3 insted of X^2, X^3
+ #' @param n         Maximum Order number you would want to check
+ #' @param method    a character string indicating which correlation coefficient (or covariance) is to be computed.
+ #' @param method    log(logarithmic), poly(Polynomial), expo(Exponential), Linear. Default is log.
 
  #' @examples X <- mtcars[,1:2]
  #' @examples Y <- mtcars[,1:2]
