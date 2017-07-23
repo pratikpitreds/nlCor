@@ -13,7 +13,7 @@ nlCor(x, y, inverse = F, n = 2,
 
 \item{y}{ second dataset (can be a matrix or dataframe or array)}
 
-\item{inverse}{ take the inverse relation eg. transforming 1/x^2,1/x^3 insted of x^2, x^3, default is false.}
+\item{inverse}{ take the inverse relation eg. transforming 1/x^2,1/x^3 instead of x^2, x^3, default is false.}
 
 \item{n}{ Maximum power or degree one would want to check, default is 2.}
 
