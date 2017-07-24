@@ -71,19 +71,19 @@ nlCor <-function(x,y,inverse=F,n=2,method="log",na.rm=F){
   if("log" %in% method){
     if(inverse==FALSE){
       X2 <- log(X)
-      print(paste0("Logarithmic Relation :"))
+      print(paste0("Logarithmic Correlation :"))
       print(cor(X2,Y))
     }
     else{
       for(i in 2:n){
         X2 <- exp(X)
-        print(paste0("Logarithmic Inverse Relation :"))
+        print(paste0("Logarithmic Inverse Correlation :"))
         print(cor(X2,Y))
       }
     }
   }
   if("Linear" %in% method){
-    print(paste0("Linear  Relation :"))
+    print(paste0("Linear Correlation :"))
     print(cor(X,Y))
   }
 }
